@@ -1,0 +1,9 @@
+<Solution>
+  <Project Path="Oservis.Application/Oservis.Application.csproj" />
+  <Project Path="Oservis.Domain/Oservis.Domain.csproj" />
+  <Project Path="Oservis.Infrastructure/Oservis.Infrastructure.csproj" />
+  <Project Path="Oservis.IntegrationTests/Oservis.IntegrationTests.csproj" />
+  <Project Path="Oservis.Persistence/Oservis.Persistence.csproj" />
+  <Project Path="Oservis.UnitTests/Oservis.UnitTests.csproj" />
+  <Project Path="Oservis.WebApi/Oservis.WebApi.csproj" />
+</Solution>

@@ -1,0 +1,61 @@
+# =============================================================================
+# Root .gitignore for Oservis (Monorepo: .NET, React, Flutter)
+# =============================================================================
+
+# --- OS & IDEs ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.iml
+
+# --- .NET & Visual Studio ---
+**/bin/
+**/obj/
+**/Debug/
+**/Release/
+*.DotSettings.user
+*.nupkg
+*.snupkg
+*.log
+
+# --- Node.js & Web (src/web) ---
+**/node_modules/
+**/dist/
+**/dist-ssr/
+*.local
+.env.local
+.env.*.local
+*.tsbuildinfo
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# --- Flutter & Dart (src/mobile) ---
+**/.dart_tool/
+**/build/
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/.pub-cache/
+**/.pub/
+**/ephemeral/
+**/android/.gradle/
+**/android/local.properties
+**/android/app/debug/
+**/android/app/profile/
+**/android/app/release/
+**/ios/Pods/
+**/ios/.symlinks/
+**/ios/Flutter/Flutter.framework
+**/ios/Flutter/Flutter.podspec
+**/ios/Flutter/Generated.xcconfig
+**/ios/Flutter/app.framework
+
+# --- Environment & Secret files ---
+*.env
+!.env.example

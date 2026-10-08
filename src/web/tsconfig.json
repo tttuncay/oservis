@@ -1,0 +1,30 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "jsx": "react-jsx",
+
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    // `google.maps` is ambient: the Maps JavaScript API is loaded at runtime by
+    // `@vis.gl/react-google-maps`, and the overlays `RouteMap` creates — a polyline, a
+    // marker — have no React component to go through, so they are typed from the global
+    // namespace the loader installs.
+    "types": ["vite/client", "google.maps"],
+
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      // Kept in step with the aliases in vite.config.ts, so the compiler sees the same
+      // files the bundler does.
+      "@servisapp/shared": ["../../packages/shared/src/index.ts"],
+      "@servisapp/i18n": ["../../packages/i18n/src/index.ts"],
+      "@servisapp/contracts": ["../../packages/contracts/src/index.ts"]
+    }
+  },
+  "include": ["src", "vite.config.ts", "vitest.config.ts", "tailwind.config.ts"]
+}

@@ -1,0 +1,6 @@
+@Oservis.WebApi_HostAddress = http://localhost:5197
+
+GET {{Oservis.WebApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
